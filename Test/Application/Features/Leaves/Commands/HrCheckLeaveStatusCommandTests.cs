@@ -1,5 +1,6 @@
 using Application.Features.Leave.Command.AddLeave;
 using Application.Features.Leave.Command.UpdateLeave;
+using Application.Features.Leave.Query.GetLeaveById;
 using Application.Interfaces;
 using Core.Domain.Leave;
 using FluentAssertions;
@@ -7,16 +8,16 @@ using Microsoft.EntityFrameworkCore;
 using Moq;
 using Test.Database.Seeds;
 
-namespace Test.Database.Features.Leaves.Commands;
+namespace Test.Application.Features.Leaves.Commands;
 
-public class ManagerAcceptLeaveCommandTests
+public class HrCheckLeaveStatusCommandTests
 {
     [Fact]
-    public async Task Handle_Manager_Accepts_First_Pending_Leave()
+    public async Task Handle_Hr_Check_Leave_Status()
     {
-        var (context, aliUser, aliEmployee, managerUser, managerEmployee, auditorEmployee, auditorUser)
-            = await DataSeed.SeedTestDataAsync();
-
+        // Seed data
+        var (context, aliUser, aliEmployee, managerUser, managerEmployee, auditorEmployee, auditorUser) = await DataSeed.SeedTestDataAsync();
+        
         // Ali creates a leave request
         var currentUserMock = new Mock<ICurrentUser>();
         currentUserMock.Setup(c => c.Id).Returns(aliUser.Id);
@@ -44,10 +45,20 @@ public class ManagerAcceptLeaveCommandTests
             Status = LeaveStatus.Accepted
         };
 
-        var result = await updateHandler.Handle(updateCommand, CancellationToken.None);
-        result.IsSuccess.Should().BeTrue();
+        await updateHandler.Handle(updateCommand, CancellationToken.None);
+        
+        
+        // HR fetches the leave by ID 
+        var queryHandler = new GetLeaveByIdQueryHandler(context);
+        var query = new GetLeaveByIdQuery(1);
 
-        var updatedLeave = await context.Leaves.FindAsync(leaveEntity.Id);
-        updatedLeave!.Status.Should().Be(LeaveStatus.Accepted);
+        var result = await queryHandler.Handle(query, CancellationToken.None);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Data.Should().NotBeNull();
+        result.Data!.Id.Should().Be(1);
+        result.Data.Status.Should().Be(LeaveStatus.Accepted.ToString());
+            
     }
 }

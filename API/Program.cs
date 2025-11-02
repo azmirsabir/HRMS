@@ -34,7 +34,6 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SchemaFilter<EnumSchemaFilter>();
 
-    // Configure Swagger to not automatically mark non-nullable properties as required
     c.SupportNonNullableReferenceTypes();
 
     // c.SwaggerDoc("v1", new OpenApiInfo { Title = "HRMS.Api", Version = "v1" });
