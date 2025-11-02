@@ -20,7 +20,7 @@ It serves as a simplified Human Resource Management System (HRMS) that manages e
 
 ## Setup Instructions
 
-1. Clone the repository: `git clone git@github.com:azmirsabir/ https://github.com/azmirsabir/HRMS.git && cd HRMS`  
+1. Clone the repository: `git clone https://github.com/azmirsabir/HRMS.git && cd HRMS`  
 2. Create a Postgres database: `employeems`
 3. Open `appsettings.json` and update connection string:  
    `"IdentityConnection": "Host=127.0.0.1;Database=employeems;Username=jihad;Password=rootroot"`  
