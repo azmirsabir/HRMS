@@ -33,14 +33,33 @@ It serves as a simplified Human Resource Management System (HRMS) that manages e
 
 EmployeeManagementSystem/
 │
-├── API/                     # Web API Layer (Controllers, DI setup)
-├── Application/             # CQRS Handlers, Interfaces, DTOs, Commands, Queries
-├── Core/                    # Domain Entities, Enums, Value Objects
-├── Infrastructure/          # EF Core Context, Migrations, Repositories
-├── Test/                    # xUnit & Moq-based Unit Tests
+├── 📦 API/
+│ └── Web API Layer
+│ - Controllers
+│ - DI Setup / Program.cs
 │
-├── EmployeeManagementSystem.sln
-└── README.md
+├── 📦 Application/
+│ └── CQRS & Application Layer
+│ - Handlers (Commands & Queries)
+│ - Interfaces & DTOs
+│
+├── 📦 Core/
+│ └── Domain Layer
+│ - Entities (User, Employee, Leave, Department)
+│ - Enums & Value Objects
+│
+├── 📦 Infrastructure/
+│ └── Infrastructure Layer
+│ - EF Core Context & Migrations
+│ - Repositories & Services
+│
+├── 📦 Test/
+│ └── Unit & Integration Tests
+│ - xUnit & Moq-based
+│ - Test Data Seeds
+│
+├── 📄 EmployeeManagementSystem.sln
+└── 📄 README.md
 
 ### ✅ Notes:
 
