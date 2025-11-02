@@ -42,6 +42,16 @@ EmployeeManagementSystem/
 ├── EmployeeManagementSystem.sln
 └── README.md
 
+### ✅ Notes:
+
+- **API** → Only handles controllers, DI, and configuration.  
+- **Application** → Contains CQRS commands/queries, interfaces, validators, and contracts.  
+- **Core** → Domain entities and business rules, independent of infrastructure.  
+- **Infrastructure** → Database, EF Core, service implementations.  
+- **Test** → xUnit/Moq tests and data seeding.  
+
+---
+
 ## Roles
 
 - Employee: only your own record, request a leave 
