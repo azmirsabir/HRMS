@@ -75,7 +75,7 @@ public static class DependencyInjection
             {
 
            
-                option.SwaggerDoc("v1", new OpenApiInfo { Title = "Takeel Api", Version = "v1" });
+                option.SwaggerDoc("v1", new OpenApiInfo { Title = "HRMS Api", Version = "v1" });
                 option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     In = ParameterLocation.Header,

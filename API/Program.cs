@@ -37,7 +37,7 @@ builder.Services.AddSwaggerGen(c =>
     // Configure Swagger to not automatically mark non-nullable properties as required
     c.SupportNonNullableReferenceTypes();
 
-    // c.SwaggerDoc("v1", new OpenApiInfo { Title = "Takeel.Api", Version = "v1" });
+    // c.SwaggerDoc("v1", new OpenApiInfo { Title = "HRMS.Api", Version = "v1" });
     // c.ResolveConflictingActions(apiDescription => apiDescription.First());
     // c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     // {
@@ -88,25 +88,8 @@ builder.Services.AddCors(options =>
 // });
 
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-
-
-// builder.Services.AddOpenApi();
 
 var app = builder.Build();
-
-// using (var scope = app.Services.CreateScope())
-// {
-//     try
-//     {
-//         await Seeder.SeedAsync(scope.ServiceProvider);
-//     }
-//     catch (Exception ex)
-//     {
-//         throw new Exception(ex.Message);
-//     }
-// }
 
 if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName=="Local")
 {
@@ -114,15 +97,14 @@ if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName=="Local")
     app.UseSwaggerUI(c =>
     {
         c.InjectStylesheet("/swagger-ui/custom.css"); // Custom CSS
-        // c.InjectJavascript("/swagger-ui/custom.js"); // Custom JS (Optional)
     });
 }
 
 
-// if (app.Environment.IsProduction())
-// {   
-//     app.UseCors("Production");
-// }
+if (app.Environment.IsProduction())
+{   
+    app.UseCors("Production");
+}
 
 using (var scope = app.Services.CreateScope())
 {
