@@ -13,114 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e10c0d0-c5af-454c-b199-f366a6ff8e83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/API.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/AuthorizationsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/DepartmentController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/EmployeeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Controllers/LeaveController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/EnumSchemaFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Middlewares/GlobalExceptionHandlerMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Middlewares/TokenBlacklistMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/converters/NullableFloatJsonConverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Abstractions/Behaviors/LoggingBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Abstractions/Data/IApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Common/Constants/RoleConstants.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/AuthenticationResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/ChangePasswordRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/ConfirmEmailRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/ForgetPasswordRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/LoginRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/MeResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/RefreshTokenRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/RefreshTokenResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/RegisterRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/ResetPasswordRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Authentication/SendConfirmEmailLinkRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/PaginatedResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Contracts/Result.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Commands/ChangePassword/ChangePasswordCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Commands/GenerateRefreshToken/RefreshTokenCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Commands/Login/LoginCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Commands/Logout/LogoutCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Commands/Register/RegisterCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Commands/ResetPassword/ResetPasswordCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Authorizations/Queries/MeQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Command/AddDepartment/AddDepartmentCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Command/AddDepartment/AddDepartmentCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Command/AddDepartment/AddDepartmentCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Dto/Request/AddDepartmentRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Dto/Request/GetDepartmentRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Dto/Response/DepartmentResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Query/GetAllDepartment/GetAllDepartmentQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Department/Query/GetAllDepartment/GetAllDepartmentQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Command/AddEmployee/AddEmployeeCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Command/AddEmployee/AddEmployeeCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Command/AddEmployee/AddEmployeeCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Command/UpdateEmployee/UpdateEmployeeCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Command/UpdateEmployee/UpdateEmployeeCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Command/UpdateEmployee/UpdateEmployeeCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Dto/Request/AddEmployeeRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Dto/Request/GetEmployeeRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Dto/Request/UpdateEmployeeRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Dto/Response/EmployeeResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Query/GetAllEmployee/GetAllEmployeeQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Query/GetAllEmployee/GetAllEmployeeQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Query/GetEmployeeById/GetEmployeeByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Employee/Query/GetEmployeeById/GetEmployeeByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Command/AddLeave/AddLeaveCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Command/AddLeave/AddLeaveCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Command/AddLeave/AddLeaveCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Command/UpdateLeave/UpdateLeaveCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Command/UpdateLeave/UpdateLeaveCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Command/UpdateLeave/UpdateLeaveCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Dto/Request/AddLeaveRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Dto/Request/GetLeaveRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Dto/Request/UpdateLeaveRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Dto/Response/LeaveResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Query/GetAllLeave/GetAllLeaveQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Query/GetAllLeave/GetAllLeaveQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Query/GetLeaveById/GetLeaveByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Features/Leave/Query/GetLeaveById/GetLeaveByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Interfaces/ICurrentUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Interfaces/ISalaryCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Interfaces/ITokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Validations/ValidationError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Validations/ValidationPipelineBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/Authentications/Enums/Roles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/Authentications/InvalidTokens.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/Authentications/RefreshToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/BaseEntity/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/Department/Department.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/DomainException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/Employee/Employee.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Domain/Users/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmployeeManagementSystem.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Authorizations/ClaimsTransformer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Authorizations/PermissionAuthorizationHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Authorizations/PermissionPolicyProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Authorizations/PermissionRequirement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Configurations/ImageProcessingSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Configurations/JwtSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Database/Context/MainContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Database/Seeds/DepartmentSeed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Database/Seeds/UserSeeder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Exceptions/InfrastructureException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Services/CurrentUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Services/SalaryCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Services/TokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Database/Features/Leaves/Commands/EmployeeCreateLeaveCommandTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Database/Features/Leaves/Commands/HrCheckLeaveStatusCommandTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Database/Features/Leaves/Commands/ManagerAcceptLeaveCommandTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Database/Seeds/DataSeed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Infrastructure/Services/SalaryCalculatorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EmployeeManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EmployeeManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/DependencyInjection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,8 +26,19 @@
     <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;azmirsabir&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ce51f5407c44012b548994676241efcb108/d5/46d42662/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a9ce663431c24c9aba988159f5e36465291420/2c/66e0be68/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -156,7 +62,7 @@
   "keyToString": {
     ".NET Launch Settings Profile.EmployeeManagementSystem: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Dev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -280,6 +186,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
