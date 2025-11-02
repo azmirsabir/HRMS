@@ -30,7 +30,7 @@ It serves as a simplified Human Resource Management System (HRMS) that manages e
 7. Access Swagger UI at `http://localhost:5001/swagger/index.html` 
 
 ## 📂 Project Structure
-### ✅ EmployeeManagementSystem:
+### EmployeeManagementSystem:
 - **📦 API** → Only handles controllers, DI, and configuration.  
 - **📦 Application** → Contains CQRS commands/queries, interfaces, validators, and contracts.  
 - **📦 Core** → Domain entities and business rules, independent of infrastructure.  
